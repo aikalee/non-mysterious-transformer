@@ -38,6 +38,7 @@ For each model, the followings are visualized:
 Mapping from input coordinate to residual updates:
 [equation]
 
+
 This shows how the network reshapes the feature space.
 
 2. Representation trajectories
@@ -46,8 +47,15 @@ For a sampled point:
 
 This reveals how the representation evolves across layers.
 
-## Observations
-[something]
+## Visualization
+<img height="400" alt="layer6_with_ln" src="https://github.com/user-attachments/assets/87d86130-a1d0-442f-976e-bc2d4c350663" /> 
+<img height="400" alt="layer6_without_ln" src="https://github.com/user-attachments/assets/5eabf452-0afe-45bc-b3b5-64cc2f9301d1" />
+
+<img height="405" alt="trajectory_with_ln" src="https://github.com/user-attachments/assets/b755c3b1-8a26-4ef4-827e-a0a0aa08c814" />
+<img height="405" alt="trajectory_without_ln" src="https://github.com/user-attachments/assets/1722ff54-69b8-4185-8bd4-0e5164801714" />
+
+## Interpretation
+
 
 ## Why a 2D model?
 
