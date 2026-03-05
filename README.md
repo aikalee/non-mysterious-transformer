@@ -16,15 +16,16 @@ By constraining the hidden dimension to 2D, we can directly visualize these repr
 <img height="305" alt="trajectory_without_ln" src="https://github.com/user-attachments/assets/1722ff54-69b8-4185-8bd4-0e5164801714" />
 
 ## Interpretation
-### Two Roles of Residual
-1. Preserving representations across layers, allowing each block to take them as input and refine rather than overwrite the existing representation.
-2. Accumulating updates in the residual space, resulting in trajectories of representations across layers.
-
 ### Representation Dynamics
 
 A transformer layer can be viewed as repeatedly shifting representations in the hidden space. Each block produces a residual update that moves vectors step by step, forming a trajectory through the representation space.
 
 With LayerNorm, these updates remain relatively balanced, allowing representations to evolve gradually while preserving the overall structure of the three classes. Without LayerNorm, residual updates can become uneven in magnitude, allowing a single update direction to dominate and produce large shifts. This can disrupt the existing structure of the representation space and cause representations from different classes to overlap.
+
+## Concept
+### Two Roles of Residual
+1. Preserving representations across layers, allowing each block to take them as input and refine rather than overwrite the existing representation.
+2. Accumulating updates in the residual space, resulting in trajectories of representations across layers.
 
 ## Motivation
 Transformer models are often perceived as highly complex systems whose internal behavior is difficult to interpret. This perception may partly arise from the high dimensionality of their representations rather than from fundamentally complicated mechanisms.
