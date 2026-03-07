@@ -10,10 +10,10 @@ class ResidualFFN2D(nn.Module):
         self.fc2 = nn.Linear(hidden, 2)
 
     def forward(self, h):
-        z = self.fc1(h)          # (B, hidden)
-        z = self.ln(z)           # LN 在 hidden
+        z = self.fc1(h)          
+        z = self.ln(z)           
         z = F.gelu(z)
-        r = self.fc2(z)          # 回到 2D residual
+        r = self.fc2(z)          
         return h + r, r
 
 
